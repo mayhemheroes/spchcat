@@ -1,9 +1,9 @@
 #Build Stage
-FROM fuzzers/aflplusplus:3.12c as builder
+FROM fuzzers/aflplusplus:3.12c AS builder
 
 ##Install Build Dependencies
 RUN apt-get update && \
-        DEBIAN_FRONTEND=noninteractive apt-get install -y python sudo curl libpulse-dev pulseaudio wget cmake make autoconf automake build-essential tar
+        DEBIAN_FRONTEND=noninteractive apt-get install -y python3 sudo curl libpulse-dev pulseaudio wget cmake make autoconf automake build-essential tar
 ##ADD source code to the build stage
 WORKDIR /
 ADD . /spchcat
