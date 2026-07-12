@@ -1,0 +1,10 @@
+project: spchcat
+target: spchcat
+
+cmds:
+  - cmd: /mayhem/spchcat
+    libfuzzer: true
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/spchcat/testsuite
